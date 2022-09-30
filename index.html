@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index_no_border_1217.css">
+    <title>个人主页</title>
+</head>
+<body>
+    <div class="blogo">
+        <img class="blogoimg" src="./logo/l1.png" alt="">
+        MARSBANK
+    </div>
+    <div class="bbody">
+        <div class="bwelcome">welcome</div>
+        <ul class="boption">
+            <li id="acinfol" onclick="test();">账户信息</li>
+            <li id="crtfrh">账户刷新</li>
+            <li id="crtcrd">账户开卡</li>
+            <li id="cashiol" onclick="test();">存款取现</li>
+            <li id="actranl" onclick="test();">账户转账</li>
+            <li id="acrecdl" onclick="test();">交易记录</li>
+            <li id="perinfl" onclick="test();">个人信息</li>
+            <li id="logout">退出登录</li>
+        </ul>
+        <!-- <div id="optdft" class="optinfo">默认窗口</div> -->
+        <div id="acinfod" class="optinfo">
+            <ul class="optitemlist">
+                <!-- <li class="optitem"><span class="ikey">性别: </span><span class="ival">male</span></li>                 -->
+               <!-- <li class="optitem"><span class="acard">卡号: 92800468616365e2cd686334c641cb38</span><span class="lmny">余额: 1639648603</span><span class="ctime">余额: 1639648603</span></li> -->
+               <!-- <li class="optitem"><span class="ccard">卡号: 92800468616365e2cd686334c641cb38</span><span class="patt">交易方: 3fb705cdbbeb2f3f54ebd9e80378186f</span><span class="tmny">金额: 163968603</span></li> -->
+            </ul>
+        </div>
+        <div id="cashiod" class="optinfo" hidden>
+            <ul class="optitemlist">
+            </ul>
+        </div>
+        <div id="actrand" class="optinfo" hidden>
+            <ul class="optitemlist">
+            </ul>
+        </div>
+        <div id="acrecdd" class="optinfo" hidden>
+            <ul class="optitemlist">
+            </ul>
+        </div>
+        <div id="perinfd" class="optinfo" hidden>
+            <ul class="optitemlist">
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    var optcntd = new Array();
+    var optcntl = new Array();
+    optcntl["acinfol"] = document.getElementById("acinfol");
+    optcntl["cashiol"] = document.getElementById("cashiol");
+    optcntl["actranl"] = document.getElementById("actranl");
+    optcntl["acrecdl"] = document.getElementById("acrecdl");
+    optcntl["perinfl"] = document.getElementById("perinfl");
+    optcntd["acinfol"] = document.getElementById("acinfod");
+    optcntd["cashiol"] = document.getElementById("cashiod");
+    optcntd["actranl"] = document.getElementById("actrand");
+    optcntd["acrecdl"] = document.getElementById("acrecdd");
+    optcntd["perinfl"] = document.getElementById("perinfd");
+    lasoptl = optcntl["acinfol"];
+    lasoptd = optcntd["acinfol"];
+    function test() {
+        curoptl = optcntl[event.currentTarget.id];
+        curoptd = optcntd[event.currentTarget.id];
+        lasoptl.style.color = "grey";
+        lasoptd.setAttribute("hidden", true);
+        curoptl.style.color = "white";
+        curoptd.removeAttribute("hidden");
+        lasoptl = curoptl;
+        lasoptd = curoptd;
+    }
+</script>
+<!-- <script src="crypto.js"></script> -->
+<!-- <script src="a.js"></script> -->
+<script src="requester.js"></script>
+
+</html>

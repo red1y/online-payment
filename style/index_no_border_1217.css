@@ -1,0 +1,317 @@
+* {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-color: black;
+    color: white;
+
+    /* font-size: 1em; */
+    /* font-weight: 700; */
+
+    /* letter-spacing: 1px; */
+
+    font-family: "YouYuan";
+}
+li {
+    list-style: none;
+}
+li:hover {
+    color: white;
+    border: 3px solid white;
+}
+input {
+    width: 188px;
+    padding: 7px 3px;
+
+    background-color: black;
+    color: white;
+
+    /* border: 1px solid red; */
+    border-radius: 3px;
+
+    font-size: 1.07em;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+
+    outline-style: none ;
+
+}
+.blogo {
+    float: right;
+    margin-top: 27px;
+    margin-right: 27px;
+    width: 177px;
+    height: 37px;
+    /* background-color: brown; */
+
+    text-align: center;
+    line-height: 37px;
+
+    font-size: 1.2em;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+.blogoimg {
+    float: left;
+    height: 37px;
+}
+.bbody {
+    position: relative;
+    top: 27px;
+    margin: auto;
+    margin-top: 100px;
+    width: 88%;
+    height: 77%;
+    /* background-color: black; */
+    /* border: 1px solid red; */
+    border-radius: 27px;
+}
+.bwelcome {
+    position: absolute;
+    top: 27px;
+    left: 11.5%;
+
+    width: 77%;
+    height: 54px;
+    /* background-color: burlywood; */
+
+    text-align: center;
+    line-height: 54px;
+
+    /* border: 1px solid red; */
+    border-radius: 14px;
+
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    
+}
+.boption {
+    position: absolute;
+    top: 108px;
+    left: 5%;
+
+    width: 11.5%;
+    /* background-color: burlywood; */
+
+    /* border-top: 1px solid red; */
+    /* border-left: 1px solid red; */
+    /* border-bottom: 1px solid red; */
+
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+}
+.boption li {
+
+
+    height: 54px;
+
+    /* background-color: blueviolet; */
+
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    text-align: center;
+    line-height: 54px;
+
+    color: grey;
+    /* font-size: 1em; */
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.optinfo,
+.cashiod,
+.actrand,
+.acrecdd,
+.perinfd {
+    overflow: hidden;
+
+    position: absolute;
+    top: 108px;
+    left: 16.5%;
+
+    width: 77%;
+    height: 77%;
+
+    /* background-color: chartreuse; */
+
+    /* border: 1px solid red; */
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+
+    color: grey;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.optitemlist, 
+.logform, 
+.regform {
+    overflow-y: scroll;
+    width: 101.8%;
+    height: 100%;
+}
+.optitem {
+    width: 100%;
+    height: 54px;
+
+    margin-bottom: 1px;
+
+    /* background-color: cadetblue; */
+
+    /* border: 1px solid red; */
+    border-radius: 16px;
+
+    /* text-align: center; */
+    line-height: 54px;
+
+}
+.optitem .key {
+    display: inline-block;
+    /* width: 49%; */
+    width: 40%;
+    /* background-color: rebeccapurple; */
+    text-align: right;
+}
+.optitem .value {
+    display: inline-block;
+    width: 49%;
+    /* background-color: salmon; */
+    text-align: left;
+}
+
+.optitem .card_id {
+    display: inline-block;
+    width: 27%;
+    /* background-color: rebeccapurple; */
+    text-align: left;
+}
+.optitem .cashin {
+    display: inline-block;
+    width: 7%;
+    /* background-color: rebeccapurple; */
+    text-align: left;
+}
+.optitem .cashout {
+    display: inline-block;
+    width: 7%;
+    /* background-color: rebeccapurple; */
+    text-align: left;
+}
+
+.cap {
+    vertical-align: middle;
+    height: 37px;
+}
+
+
+.optitem .acard {
+    display: inline-block;
+    margin-left: 77px;
+    width: 38%;
+    /* background-color: rebeccapurple; */
+    /* text-align: right; */
+}
+
+.optitem .lmny {
+    display: inline-block;
+    margin-left: 17px;
+    width: 19%;
+    /* background-color: rebeccapurple; */
+    /* text-align: right; */
+}
+
+.optitem .ctime {
+    display: inline-block;
+    /* margin-left: 17px; */
+    width: 22%;
+    /* background-color: rebeccapurple; */
+    /* text-align: right; */
+}
+
+.optitem .ctime {
+    display: inline-block;
+    /* margin-left: 17px; */
+    width: 22%;
+    /* background-color: rebeccapurple; */
+    /* text-align: right; */
+}
+
+.optitem .bcard {
+    display: inline-block;
+    margin-left: 177px;
+    width: 38%;
+    /* background-color: rebeccapurple; */
+    /* text-align: right; */
+}
+
+.optitem .option {
+    display: inline-block;
+    margin-left: 37px;
+    width: 22%;
+    /* background-color: rebeccapurple; */
+    /* text-align: right; */
+}
+
+.optitem .ccard {
+    display: inline-block;
+    margin-left: 47px;
+    width: 38%;
+    /* background-color: rebeccapurple; */
+    /* text-align: right; */
+}
+
+.optitem .patt {
+    display: inline-block;
+    margin-left: 7px;
+    width: 40%;
+    /* background-color: rebeccapurple; */
+    /* text-align: right; */
+}
+
+.optitem .tmny {
+    display: inline-block;
+    margin-left: 3px;
+    width: 15%;
+    /* background-color: rebeccapurple; */
+    /* text-align: right; */
+}
+
+.optitem .ikey {
+    display: inline-block;
+    margin-left: 307px;
+    margin-right: 7px;
+    width: 9%;
+    /* background-color: rebeccapurple; */
+    text-align: right;
+}
+.optitem .ival {
+    display: inline-block;
+    width: 21%;
+    /* background-color: salmon; */
+    /* text-align: right; */
+}
+
+.logbtn {
+    width: 100%;
+    height: 54px;
+
+    margin-bottom: 1px;
+
+    /* background-color: cadetblue; */
+
+    /* border: 1px solid red; */
+    border-radius: 16px;
+
+    text-align: center;
+    line-height: 54px;
+}

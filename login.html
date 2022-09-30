@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index_no_border_1217.css">
+    <title>登录火星银行</title>
+</head>
+<body>
+    <div class="blogo">
+        <img class="blogoimg" src="./logo/l1.png" alt="">
+        MARSBANK
+    </div>
+    <div class="bbody">
+        <div class="bwelcome">welcome</div>
+        <ul class="boption">
+            <li id="loginl" onclick="test();">登录</li>
+            <li id="regstl" onclick="test();">注册</li>
+        </ul>
+        <!-- <div id="optdft" class="optinfo">默认窗口</div> -->
+        <div id="logind" class="optinfo">
+            <ul id="logform" class="logform">
+                <li class="optitem"><span class="key">账号</span>: <span class="value"><input id="act" type="text"></span>
+                <li class="optitem"><span class="key">密码</span>: <span class="value"><input id="pwd" type="password"></span></li>
+                <li class="optitem" id="imgcp"><span class="key"><img id="capimg" class="cap" onclick="this.src='cap.php?param='+Math.random();" src="cap.php" alt=""></span>: <span class="value"><input id="cap" type="text"></span></li>
+                <li class="logbtn" id="login">登录</li>
+            </ul>
+        </div>
+        <div id="regstd" class="optinfo" hidden>
+            <ul id="regform" class="regform">
+                <!-- <input type="text" name="" id=""> -->
+                <li class="optitem"><span class="key">姓名</span>: <span class="value"><input placeholder="6-10位大小写英文字符" autocomplete="off" id="rnm" onblur="checkRnm();" type="text"></span>
+                <li class="optitem"><span class="key">性别</span>: <span class="value"><input placeholder="male or female" autocomplete="off" id="sex" onblur="checkSex();" type="text"></span>
+                <li class="optitem"><span class="key">年龄</span>: <span class="value"><input placeholder="20 ~ 79" autocomplete="off" id="age" onblur="checkAge();" type="text"></span>
+                <li class="optitem"><span class="key">证件</span>: <span class="value"><input placeholder="xxx-xxx-xxx" autocomplete="off" onblur="checkCid();" id="cid" type="text"></span>
+                <li class="optitem"><span class="key">电话</span>: <span class="value"><input placeholder="xxx-xxxx-xxxx" autocomplete="off" onblur="checkTid();" id="tid" type="text"></span>
+                <li class="optitem"><span class="key">邮箱</span>: <span class="value"><input placeholder="请输入qq邮箱" autocomplete="off" onblur="checkEid();" id="eid" type="text"></span>
+                <li class="optitem"><span class="key">登录密码</span>: <span class="value"><input placeholder="字母，数字，特殊字符" autocomplete="off" onblur="checkPwd();" id="lpwd" type="password"></span>
+                <li class="optitem"><span class="key">确认密码</span>: <span class="value"><input autocomplete="off" onblur="checkSme()" id="rlpw" type="password"></span>
+                <li class="optitem"><span class="key">支付密码</span>: <span class="value"><input placeholder="6位数字密码" autocomplete="off" onblur="checkPPwd();" id="ppwd" type="password"></span>
+                <li class="optitem"><span class="key">确认密码</span>: <span class="value"><input autocomplete="off" onblur="checkPSme()" id="rppw" type="password"></span>
+                <li class="logbtn" id="regst">注册</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    var optcntd = new Array();
+    var optcntl = new Array();
+    optcntl["loginl"] = document.getElementById("loginl");
+    optcntl["regstl"] = document.getElementById("regstl");
+    optcntd["loginl"] = document.getElementById("logind");
+    optcntd["regstl"] = document.getElementById("regstd");
+    lasoptl = optcntl["loginl"];
+    lasoptd = optcntd["loginl"];
+    function test() {
+        curoptl = optcntl[event.currentTarget.id];
+        curoptd = optcntd[event.currentTarget.id];
+        lasoptl.style.color = "grey";
+        lasoptd.setAttribute("hidden", true);
+        curoptl.style.color = "white";
+        curoptd.removeAttribute("hidden");
+        lasoptl = curoptl;
+        lasoptd = curoptd;
+    }
+</script>
+<script>
+    function checkRnm() {/^[a-zA-Z]{6,10}$/.test(event.currentTarget.value) ? event.currentTarget.style.color = "purple" : event.currentTarget.style.color = "red";}
+    function checkSex() {/(^male$)|(^female$)/.test(event.currentTarget.value) ? event.currentTarget.style.color = "purple" : event.currentTarget.style.color = "red";}
+    function checkAge() {/^[2-7][0-9]$/.test(event.currentTarget.value) ? event.currentTarget.style.color = "purple" : event.currentTarget.style.color = "red";}
+    function checkCid() {/^\d{3}-\d{3}-\d{3}$/.test(event.currentTarget.value) ? event.currentTarget.style.color = "purple" : event.currentTarget.style.color = "red";}
+    function checkTid() {/^\d{3}-\d{4}-\d{4}$/.test(event.currentTarget.value) ? event.currentTarget.style.color = "purple" : event.currentTarget.style.color = "red";}
+    function checkEid() {/^\d{8,10}@qq\.com$/.test(event.currentTarget.value) ? event.currentTarget.style.color = "purple" : event.currentTarget.style.color = "red";}
+    function checkPwd() {
+        pwd = event.currentTarget.value; ste = 0;
+        pwd.match(/[a-z]/g) ? ste++ : ste--;
+        pwd.match(/[A-Z]/g) ? ste++ : ste--;
+        pwd.match(/[0-9]/g) ? ste++ : ste--;
+        pwd.match(/!|@|#|\$|%|_/g) ? ste++ : ste--;
+        // console.log(ste);
+        ste > 1 ? event.currentTarget.style.color = "purple" : event.currentTarget.style.color = "red";
+    }
+    function checkSme() {event.currentTarget.value == document.getElementById("lpwd").value ? event.currentTarget.style.color = "purple" : event.currentTarget.style.color = "red";}
+    function checkPPwd() {/^\d{6}$/.test(event.currentTarget.value) ? event.currentTarget.style.color = "purple" : event.currentTarget.style.color = "red"};
+    function checkPSme() {event.currentTarget.value == document.getElementById("ppwd").value ? event.currentTarget.style.color = "purple" : event.currentTarget.style.color = "red";}
+
+</script>
+<script src="requester.js"></script>
+</html>
